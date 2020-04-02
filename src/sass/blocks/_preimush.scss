@@ -1,0 +1,46 @@
+.preimush {
+    background-color: #f6f6f6;
+    padding: 70px 0 80px 0;
+    &__items {
+        display: flex;
+        justify-content: center;
+        margin-top: 65px;
+    }
+    &__item {
+        width: 250px;
+        text-align: center;
+        color: #0d0d0d;
+        font-size: 14px;
+        font-weight: 300;
+        margin-right: 95px;
+        &:last-child {
+            margin-right: 0;
+        }
+        span {
+            display: block;
+            color: #0d0d0d;
+            // color: #ff0000;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;  
+            &.love  {
+                color: #ff0000;
+                text-decoration: underline;
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 38px;
+        }
+    }
+}
+
+.header_h2 {
+    color: #0d0d0d;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
