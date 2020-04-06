@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
 //     });
 // });
 
+// слайдер
     const slider = tns({
         container: '.carousel__iner',
         items: 1,
@@ -44,5 +45,28 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.prev').addEventListener('click', () => {
         slider.goTo('prev');
     });
+
+// каталог переключение, табы
+
+    $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
+      $(this)
+        .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
+        .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
+    });
+
+//вперёд-назад
+
+    function moreInfo (item) {
+      $(item).each(function(i) {
+         $(this).on('click', function (e) {
+            e.preventDefault();
+            $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+            $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+         });
+      });
+    }
+
+    moreInfo('.catalog-item__link');
+    moreInfo('.catalog-item__back');
 
 });
