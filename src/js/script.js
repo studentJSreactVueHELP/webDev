@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
         .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
 
-//вперёд-назад
+//вперёд-назад (когда жмёшь подробнее в каталоге)
 
     function moreInfo (item) {
       $(item).each(function(i) {
@@ -69,4 +69,29 @@ window.addEventListener('DOMContentLoaded', () => {
     moreInfo('.catalog-item__link');
     moreInfo('.catalog-item__back');
 
+//Открытие модальных окон
+
+    $('[data-modal="consultation"]').on('click', function () {
+      $('.overlay, #consultation').fadeIn('slow');
+    });
+
+    $('.button_mini').each(function (i) {
+       $(this).on('click', function () {
+         $('#order .modal__subtitle').text($('.catalog-item__subtitle').eq(i).text());
+         $('.overlay, #order').fadeIn('slow');   
+       });
+    });
+
+//Закрытие на крестик
+
+    $('.modal__close').on('click', function () {
+      $('.overlay, #consultation, #order, #mini').fadeOut();
+    });
+
+    $('.overlay').on('click', function (e) {
+      if ($(e.target).hasClass('overlay')) { 
+         $('.overlay, #consultation, #order, #mini').fadeOut(); 
+      }
+    });
+  
 });
