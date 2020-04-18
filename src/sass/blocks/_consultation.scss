@@ -32,6 +32,25 @@
       }
    }
 
+   .error {
+      border: 1px solid $red;
+      &:focus {
+         border: none;
+      }
+   }
+
+   label.error {
+      border: none;
+      margin: 0 auto;
+      width: 90%;
+      color: white;
+      position: relative;
+      top: -10px;
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 11px;
+   }
+
    &_mt-25 {
       margin-top: 25px;
    }

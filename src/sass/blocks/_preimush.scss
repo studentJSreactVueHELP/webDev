@@ -36,6 +36,30 @@
             margin-bottom: 38px;
         }
     }
+    &__img {
+       &_cup { 
+          &:hover {
+            animation: heartbeat 2s ease-in-out;
+          }
+       }
+       &_cros { 
+          &:hover {
+            animation: heartbeat 2s ease-in-out;
+          }
+       }
+       &_heart {
+          animation-name: heartbeat;
+          animation-duration: 1s;
+          animation-timing-function: ease;
+          animation-iteration-count: infinite;
+
+          &:hover {
+             animation-play-state: paused;
+          }
+
+          // animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction; - это так что бы не забывать порядок
+       }
+    }
 }
 
 .header_h2 {

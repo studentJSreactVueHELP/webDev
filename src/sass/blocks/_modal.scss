@@ -48,6 +48,23 @@
    &_mini {
       min-height: 140px;
    }
+
+   .error {
+      border: 1px solid $red;
+      &:focus {
+         border: none;
+      }
+   }
+
+   label.error {
+      border: none;
+      color: red;
+      position: relative;
+      top: -10px;
+      font-size: 13px;
+      text-align: center;
+      margin-bottom: 11px;
+   }
 }
 
 #consultation, #order, #mini {

@@ -1,5 +1,12 @@
+@import 'libx/bootstrap-reboot.min';
+@import 'libx/font';
+@import 'libx/slick';
+@import 'libx/tiny-slider';
+@import 'libx/animate';
+
 @import 'base/veriable';
 @import 'base/mixin';
+@import 'base/animation';
 * {
   font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -19,5 +26,6 @@
 @import 'blocks/reviews';
 @import 'blocks/footer';
 @import 'blocks/modal';
+@import 'blocks/pageup';
 @import 'base/media';
 
